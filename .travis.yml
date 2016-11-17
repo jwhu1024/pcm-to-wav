@@ -15,7 +15,7 @@ script:
 
 after_script:
         - ./bin/wave time.pcm
-        - aplay time.wav
+          #        - aplay time.wav
 
 notifications:
         email:
