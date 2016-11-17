@@ -14,7 +14,7 @@ script:
         - make -j 4
 
 after_script:
-        - ./bin/wave time.pcm
+        - ./bin/wave time.wave
         - ls -al
 
 notifications:
