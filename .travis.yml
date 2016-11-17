@@ -15,6 +15,7 @@ script:
 
 after_script:
         - ./bin/wave time.pcm
+        - ls -al
 
 notifications:
         email:
