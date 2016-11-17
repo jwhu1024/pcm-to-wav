@@ -1,0 +1,28 @@
+sudo: required
+
+language: c
+
+compiler: gcc
+
+before_install:
+        - sudo apt-get -qq update
+
+#install:
+#        - sudo apt-get install -y libjson0 libjson0-dev
+#        - sudo ./json-c.sh
+
+before_script:
+        - cmake .
+
+script:
+        - make -j 4
+
+after_script:
+        - ./bin/wave time.pcm
+
+notifications:
+        email:
+            - jwhu1024@gmail.com
+                          
+        on_success: change
+        on_failure: always
