@@ -4,12 +4,8 @@ language: c
 
 compiler: gcc
 
-before_install:
-        - sudo apt-get -qq update
-
-#install:
-#        - sudo apt-get install -y libjson0 libjson0-dev
-#        - sudo ./json-c.sh
+#before_install:
+#        - sudo apt-get -qq update
 
 before_script:
         - cmake .
@@ -19,6 +15,7 @@ script:
 
 after_script:
         - ./bin/wave time.pcm
+        - aplay time.wav
 
 notifications:
         email:

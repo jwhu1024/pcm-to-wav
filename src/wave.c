@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "wave.h"
 
 char* dummy_get_raw_pcm (char *p, int *bytes_read)
 {
