@@ -4,9 +4,9 @@ language: c
 
 compiler: gcc
 
-before_install:
-        #- sudo apt-get -qq update
-        - sudo apt-get install alsa-utils
+#before_install:
+#        - sudo apt-get -qq update
+#        - sudo apt-get install alsa-utils
 
 before_script:
         - cmake .
@@ -17,7 +17,7 @@ script:
 after_script:
         - ./bin/wave time.wav
         - file time.wav
-        - aplay time.wav
+#        - aplay time.wav
 
 notifications:
         email:
