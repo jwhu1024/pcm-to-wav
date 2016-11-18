@@ -16,8 +16,8 @@ script:
 
 after_script:
         - ./bin/wave time.wav
-        - ls -al
         - file time.wav
+        - aplay time.wav
 
 notifications:
         email:
